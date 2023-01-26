@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Despliegue app Node.j sobre instancia EC2 con ubuntu 20.04
+Description: Despliegue app Node.js sobre instancia EC2 con ubuntu 20.04
 Parameters:
   EC2AMI:
     Description: Imagen del Sistema Operativo
