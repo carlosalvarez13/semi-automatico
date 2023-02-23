@@ -201,6 +201,22 @@ Resources:
       Tags:
         - Key: Name
           Value: !Ref AWS::StackName
+  CodeDeployApplication: 
+    Type: AWS::CodeDeploy::Application 
+    Properties:
+      ComputePlatform: Server
+  DeploymentGroup: 
+  Type: AWS::CodeDeploy::DeploymentGroup 
+  Properties:
+    ApplicationName: 
+      Ref: DesplegarConCodeDeploy
+    DeploymentGroupName: !Ref Despliegue
+      Ec2TagFilters:
+        - Key: !Ref Name
+          Value: !Ref AWS::StackName
+          Type: KEY_AND_VALUE
+    ServiceRoleArn: 
+      arn:aws:iam::306482496671:role/LabRole
 Outputs:
   EndPoint:
     Description: "DNS publica"
